@@ -10,11 +10,11 @@
 
                 <v-form @submit.prevent="submit">
 
-                    <v-text-field v-model="email" :error-messages="errors" label="Email" required outlined dark filled
+                    <v-text-field v-model="email" :error-messages="errors" label="Usuario" required outlined dark filled
                         dense></v-text-field>
 
 
-                    <v-text-field v-model="password" :error-messages="errors" label="Password"
+                    <v-text-field v-model="password" :error-messages="errors" label="Contraseña"
                         :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'" @click:append="showPass = !showPass"
                         required outlined dense dark filled :type="showPass ? 'text' : 'password'">
                     </v-text-field>

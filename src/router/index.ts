@@ -33,6 +33,14 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Login2.vue')  //component: Home (también funciona así)
+  },
+  {
+    path: '/caratula',
+    name: 'caratula-1',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Caratula.vue')  //component: Home (también funciona así)
   }
 ]
 
