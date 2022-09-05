@@ -1,30 +1,29 @@
 <template>
-  <section class="container-login2">
-    <v-col class="signin">
-      <v-row class="logo">
-        <v-img max-height="10%" max-width="10%" src="images/logoMP.JPG"></v-img>
-      </v-row>
-      <v-row class="formlogin2">
-        <v-form  ref="form" v-model="valid" lazy-validation>
-          <v-text-field
-            v-model="usuario"
-            :rules="nameRules"
-            label="Usuario"
-            required
-          ></v-text-field>
+  <v-container flex fill-height class="teal lighten-4">
+    <v-row class="justify-center" align="center">
+      <v-col class="white justify-center" align="center" md="3">
+        <v-row class="justify-center" align="center">
+          <v-col class="" align="center" justify="center">
+            <v-img max-width="80%" max-height="80%" src="images/logoMP.JPG"></v-img>
+          </v-col>
+        </v-row>
+        <v-row class="justify-center">
+          <v-col class="" md="8">
+            <v-form ref="form" v-model="valid" lazy-validation>
+              <v-text-field v-model="usuario" :rules="nameRules" label="Usuario" required></v-text-field>
 
-          <v-text-field
-            v-model="password"
-            :rules="passRules"
-            label="clave"
-            required
-          ></v-text-field>
+              <v-text-field v-model="password" :rules="passRules" label="Clave" required></v-text-field>
 
-          <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
-            Ingresar
-          </v-btn>
+              <v-btn :disabled="!valid" color="success" class="" @click="validate">
+                Ingresar
+              </v-btn>
 
-          <!--<v-btn
+            </v-form>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+    <!--<v-btn
       color="error"
       class="mr-4"
       @click="reset"
@@ -38,10 +37,7 @@
     >
       Reset Validation
     </v-btn>  -->
-        </v-form>
-      </v-row>
-    </v-col>
-  </section>
+  </v-container>
 </template>
 
 <script>
@@ -54,7 +50,7 @@ export default Vue.extend({
     return {
       valid: true,
       nameRules: [(v) => !!v || "Usuario es requerido"],
-      passRules: [(v) => !!v || "Contraseña requerido"],
+      passRules: [(v) => !!v || "Ingrese contraseña"],
     };
   },
   methods: {

@@ -1,5 +1,5 @@
 <template>
-  <v-app style="min-height: 100%;">
+  <v-app style="min-height: 100%">
     <v-main>
       <router-view />
     </v-main>
@@ -21,5 +21,6 @@ export default Vue.extend({
 <style>
 html, body {
     min-height: 100%;
+   
 }
 </style>
