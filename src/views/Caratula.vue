@@ -1,5 +1,5 @@
 <template>
-  <v-container class="teal lighten-4" flex >
+  <v-container class="white" flex >
     <v-row class="mb-6">
       <!-- mb es margin bottom-->
       <NavBarTop></NavBarTop>
@@ -56,7 +56,7 @@
       </v-col>
     </v-row>
     <v-divider></v-divider>
-    <v-row class="justify-center info">
+    <v-row class="justify-center teal lighten-4">
       <v-col md="2" xs3 >
         <h3>Vencimientos:</h3>
       </v-col>
@@ -103,14 +103,17 @@
         </p>
       </v-col>
     </v-row>
-
+    <v-divider ></v-divider>
+    <v-row class="mt-2 mb-4 grey lighten-2" justify="center">
+      <PiePag></PiePag>
+    </v-row>
   </v-container>
 </template>
 
 <script >
 import Vue from 'vue';
 import NavBarTop from '@/components/NavBarTop.vue'
-
+import PiePag from "@/components/piepagina.vue";
 export default Vue.extend({
   name: 'caratula-1',
 
@@ -119,7 +122,7 @@ export default Vue.extend({
   }),
   components: {
     NavBarTop,
-
+    PiePag
   }
 });
 

@@ -50,7 +50,6 @@ const routes: Array<RouteConfig> = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Login3.vue')  //component: Home (también funciona así)
   },
-  
   {
     path: '/DetallePersona',
     name: 'detalle-persona',
@@ -58,6 +57,14 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/DetallePersona.vue')  //component: Home (también funciona así)
+  },
+  {
+    path: '/EditorTexto',
+    name: 'EditorTexto',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/EditorTexto.vue')  //component: Home (también funciona así)
   }
 ]
 
